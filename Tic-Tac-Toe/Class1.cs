@@ -13,7 +13,26 @@ namespace Tic_Tac_Toe
         static int playerChoice;
         static int player = 1;
 
+        static void Main(string[] args)
+        {
+            do
+            {
+                Console.Clear(); // When the game starts/restarts, the program is cleared.
+                Console.WriteLine("Player 1 is X's   and   Player 2 is O's"); 
+                
+                if (player % 2 != 0) 
+                {
+                    Console.WriteLine("Player 1's turn...");
+                }
+                else
+                {
+                    Console.WriteLine("Player 2's turn...");
+                }
+                Grid();
+                playerChoice = int.Parse(Console.ReadLine());
 
+            }
+        }
         //Grid method, creates the grid.
         private static void Grid()
         {
