@@ -28,9 +28,28 @@ namespace Tic_Tac_Toe
                 {
                     Console.WriteLine("Player 2's turn...");
                 }
+
                 Grid();
                 playerChoice = int.Parse(Console.ReadLine());
 
+                if (gridArray[playerChoice] != 'X' && gridArray[playerChoice] != 'O') 
+                {
+                    if (player % 2 == 0)
+                    {
+                        gridArray[playerChoice] = 'O';
+                        player++;
+                    }
+                    else
+                    {
+                        gridArray[playerChoice] = 'X';
+                        player++;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine($"The spot {[playerChoice]} is already taken...");
+                    Thread.Sleep(500);
+                }
             }
         }
         //Grid method, creates the grid.
