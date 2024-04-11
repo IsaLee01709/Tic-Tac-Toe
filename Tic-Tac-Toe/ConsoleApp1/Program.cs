@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading;
 using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace TicTacToe
 {
@@ -49,7 +50,7 @@ namespace TicTacToe
                 }
                 else
                 {
-                    Console.WriteLine($"The spot { [playerChoice]} is already taken...");
+                    Console.WriteLine($"The spot {playerChoice} is already taken...");
                     Thread.Sleep(500);
                 }
                 status = WinChecker();
@@ -61,11 +62,11 @@ namespace TicTacToe
 
             if (flag == 1)
             {
-                Console.WriteLine($"Player { [((player % 2) + 1)]} won!!!");
+                Console.WriteLine($"Player {((player % 2) + 1)} won!!!");
             }
             else
             {
-                 Console.WriteLine("It's a tie...")
+                Console.WriteLine("It's a tie...");
             }
             Console.ReadLine();
         }
@@ -98,14 +99,14 @@ namespace TicTacToe
             }
 
             else if ((gridArray[1] != '1' && gridArray[2] != '2' && gridArray[3] != '3' && gridArray[4] != '4' && gridArray[5] != '5' && gridArray[6] != '6' && gridArray[7] != '7' && gridArray[8] != '8' && gridArray[9] != '9'))
-            { 
-                return -1; 
+            {
+                return -1;
             }
 
             else
             {
                 return 0;
-            } 
+            }
         }
     }
 }
