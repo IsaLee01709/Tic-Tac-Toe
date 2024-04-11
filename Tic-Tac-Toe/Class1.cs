@@ -66,5 +66,29 @@ namespace Tic_Tac_Toe
             Console.WriteLine("     |     |      ");
         }
 
+        private static int WinChecker()
+        {
+            if ((gridArray[1] == gridArray[2]) && gridArray[2] == gridArray[3]) ||
+                (gridArray[4] == gridArray[5]) && gridArray[5] == gridArray[6]) ||
+                (gridArray[6] == gridArray[7]) && gridArray[7] == gridArray[8]) ||
+                (gridArray[1] == gridArray[4]) && gridArray[4] == gridArray[7]) ||
+                (gridArray[2] == gridArray[5]) && gridArray[5] == gridArray[8]) ||
+                (gridArray[3] == gridArray[6]) && gridArray[6] == gridArray[9]) ||
+                (gridArray[1] == gridArray[5]) && gridArray[5] == gridArray[9]) ||
+                (gridArray[3] == gridArray[5]) && gridArray[5] == gridArray[7]))
+            {
+                return 1;
+            }
+
+            else if ((gridArray[1] != '1' && gridArray[2] != '2' && gridArray[3] != '3' && gridArray[4] != '4' && gridArray[5] != '5' && gridArray[6] != '6' && gridArray[7] != '7' && gridArray[8] != '8' && gridArray[9] != '9'))
+            { 
+                return -1; 
+            }
+
+            else
+            {
+                return 0;
+            } 
+        }
     }
 }
