@@ -84,14 +84,14 @@ namespace Tic_Tac_Toe
         //Checks game status.
         private static int WinChecker()
         {
-            if ((gridArray[1] == gridArray[2]) && gridArray[2] == gridArray[3]) ||
-                (gridArray[4] == gridArray[5]) && gridArray[5] == gridArray[6]) ||
-                (gridArray[6] == gridArray[7]) && gridArray[7] == gridArray[8]) ||
-                (gridArray[1] == gridArray[4]) && gridArray[4] == gridArray[7]) ||
-                (gridArray[2] == gridArray[5]) && gridArray[5] == gridArray[8]) ||
-                (gridArray[3] == gridArray[6]) && gridArray[6] == gridArray[9]) ||
-                (gridArray[1] == gridArray[5]) && gridArray[5] == gridArray[9]) ||
-                (gridArray[3] == gridArray[5]) && gridArray[5] == gridArray[7]))
+            if ((gridArray[1] == gridArray[2] && gridArray[2] == gridArray[3]) ||
+                (gridArray[4] == gridArray[5] && gridArray[5] == gridArray[6]) ||
+                (gridArray[6] == gridArray[7] && gridArray[7] == gridArray[8]) ||
+                (gridArray[1] == gridArray[4] && gridArray[4] == gridArray[7]) ||
+                (gridArray[2] == gridArray[5] && gridArray[5] == gridArray[8]) ||
+                (gridArray[3] == gridArray[6] && gridArray[6] == gridArray[9]) ||
+                (gridArray[1] == gridArray[5] && gridArray[5] == gridArray[9]) ||
+                (gridArray[3] == gridArray[5] && gridArray[5] == gridArray[7]))
             {
                 return 1;
             }
