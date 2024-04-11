@@ -12,15 +12,16 @@ namespace Tic_Tac_Toe
         static char[] gridArray = { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
         static int playerChoice;
         static int player = 1;
+        static int flag = 0;
 
         static void Main(string[] args)
         {
             do
             {
                 Console.Clear(); // When the game starts/restarts, the program is cleared.
-                Console.WriteLine("Player 1 is X's   and   Player 2 is O's"); 
-                
-                if (player % 2 != 0) 
+                Console.WriteLine("Player 1 is X's   and   Player 2 is O's");
+
+                if (player % 2 != 0)
                 {
                     Console.WriteLine("Player 1's turn...");
                 }
@@ -32,7 +33,7 @@ namespace Tic_Tac_Toe
                 Grid();
                 playerChoice = int.Parse(Console.ReadLine());
 
-                if (gridArray[playerChoice] != 'X' && gridArray[playerChoice] != 'O') 
+                if (gridArray[playerChoice] != 'X' && gridArray[playerChoice] != 'O')
                 {
                     if (player % 2 == 0)
                     {
@@ -47,10 +48,25 @@ namespace Tic_Tac_Toe
                 }
                 else
                 {
-                    Console.WriteLine($"The spot {[playerChoice]} is already taken...");
+                    Console.WriteLine($"The spot { [playerChoice]} is already taken...");
                     Thread.Sleep(500);
                 }
+                status = WinChecker();
             }
+            while (status != 1 && status != -1);
+
+            Console.Clear();
+            Grid();
+
+            if (flag == 1)
+            {
+                Console.WriteLine($"Player { [((player % 2) + 1)]} won!!!");
+            }
+            else
+            {
+                 Console.WriteLine("It's a tie...")
+            }
+            Console.ReadLine();
         }
         //Grid method, creates the grid.
         private static void Grid()
@@ -65,7 +81,7 @@ namespace Tic_Tac_Toe
             Console.WriteLine($"  {gridArray[7]}  |  {gridArray[8]}  |  {gridArray[9]}";
             Console.WriteLine("     |     |      ");
         }
-
+        //Checks game status.
         private static int WinChecker()
         {
             if ((gridArray[1] == gridArray[2]) && gridArray[2] == gridArray[3]) ||
