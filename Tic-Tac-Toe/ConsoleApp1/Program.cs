@@ -1,7 +1,4 @@
-﻿using System;
-using System.Threading;
-
-namespace TicTacToe
+﻿namespace TicTacToe
 {
     public class Program
     {
@@ -12,6 +9,9 @@ namespace TicTacToe
 
         public static void Main(string[] args)
         {
+
+            //TODO  IMPLEMENT WRAPPED LOOP AROUND EXISITING LOOP TO PROMPT PLAYERS TO START GAME AGAIN
+            //& IMPLEMENT FIX FOR NON-ASSOCIATIVE VALUES.
             int status;
             do
             {
@@ -94,11 +94,11 @@ namespace TicTacToe
             }
             else if ((gridArray[1] != '1' && gridArray[2] != '2' && gridArray[3] != '3' && gridArray[4] != '4' && gridArray[5] != '5' && gridArray[6] != '6' && gridArray[7] != '7' && gridArray[8] != '8' && gridArray[9] != '9'))
             {
-                return -1; 
+                return -1;
             }
             else
             {
-                return 0; 
+                return 0;
             }
         }
     }
