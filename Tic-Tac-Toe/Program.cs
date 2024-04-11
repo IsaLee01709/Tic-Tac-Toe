@@ -4,9 +4,9 @@ using System.Linq;
 using System.Threading;
 using System.Text;
 
-namespace Tic_Tac_Toe
+namespace TicTacToe
 {
-    class program
+    public class Program
     {
         //Making the array of spots on the grid, and the 'choice' of position made by the specified user.
         static char[] gridArray = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
@@ -14,7 +14,7 @@ namespace Tic_Tac_Toe
         static int player = 1;
         static int flag = 0;
 
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             int status;
             do
